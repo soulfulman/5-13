@@ -1,0 +1,41 @@
+#define CAT(X,Y) X##Y
+
+int mian()
+{
+	int class84 = 2020;
+	printf("%d\n", CAT(class, 84));
+	return 0;
+}
+int main()
+{
+	int a = 10;
+	int b = a + 1;//1
+	int b = ++a;
+	return 0;
+}
+#define MAX(X,Y) ((X)>(Y)?(X):(Y))
+int main()
+{
+	int a = 10;
+	int b = 11;
+	float c = 3.0f;
+	float d = 4.0f;
+	//函数在调用的时候会有返回的开销
+	int max = MAX(a++, b++);
+	float max = Max2(c, d);
+	/*printf("max=%d\n", max);
+	int max = Max(a, b);
+	max = MAX(a, b);
+	printf("max=%d\n", max);*/
+	//预处理阶段就完成了替换
+	//没有函数的调用和返回的开销
+#define SIZEOF(type)sizeof(type)
+	int main()
+	{
+		int ret = SIZEOF(int);
+		int ret = sizeof(int);
+		printf("%d\n", ret);
+		return 0;
+	}
+	return 0;
+}
